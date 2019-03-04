@@ -1,8 +1,8 @@
+//this clss is ised to place the 'ships' (fleet) onto board (standard board)
 import java.util.Random;
-
 public class Ship {
 
-
+//this method places the ships
     public static   void setFleet (int [][] fleet){
 
         Random chance = new Random();
