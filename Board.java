@@ -1,8 +1,6 @@
+//this is the Board class which is used to create the board 'grid,' print out board, and provide hint information
 import java.util.ArrayList;
-
-public class Board {
-
-   // private int[][] standardBoard = new int[10][10];
+public class Board 
 
 
     //the method below creates the board for the game
@@ -33,6 +31,7 @@ public class Board {
        }
     }
 
+//the method below prints out hints about the whereabouts of other ships in the event of a missed shot
     public void help (int[] shot, int[][] fleet, int versuch){
        int number =0;
        int letter =0;
@@ -40,7 +39,7 @@ public class Board {
        int ArrayToInt;
 
 
-       for (int line=0; line < fleet.length; line++){
+       for (int line=0; line < fleet.length; line++){ //this loop checks the fleet multi-array for other ships on the [][column] and [row]
 
            if (fleet[line][0] == shot[0])
                number++;
