@@ -1,8 +1,8 @@
+//this class contains the methods that allow the player to shoot, hit, and register that shot on the board
 import java.util.Scanner;
-
 public class Player {
 
-
+//the method below allows the User to input coordinates that will be checked against the muilt-array Board. There is a try/catch to check input
     public  void shoot (int[] shot) {
         Scanner input = new Scanner(System.in);
         Scanner rowScanner = new Scanner(System.in);
@@ -53,6 +53,7 @@ public class Player {
     }
 
 
+    //this method registers the shot and changes the board to 1 if it hits and to 0 if it misses
     public  void registerFire (boolean didItHit, int[] shot, int[][] fleet, int[][] standardBoard) {
         if (didItHit == true)
             standardBoard[shot[0]][shot[1]]=1;
